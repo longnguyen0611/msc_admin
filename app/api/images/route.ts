@@ -10,7 +10,7 @@ cloudinary.config({
 
 export async function GET(request: NextRequest) {
   try {
-    const { searchParams } = new URL(request.url)
+    const { searchParams } = request.nextUrl
     const folder = searchParams.get('folder') || ''
     const tags = searchParams.get('tags')?.split(',') || []
     const limit = parseInt(searchParams.get('limit') || '50')
