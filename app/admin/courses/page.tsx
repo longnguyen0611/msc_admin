@@ -270,7 +270,7 @@ function CoursesManagementContent() {
 
 export default function CoursesManagementPage() {
   return (
-    <ProtectedRoute allowedRoles={['admin', 'editor']}>
+    <ProtectedRoute allowedRoles={['admin']}>
       <CoursesManagementContent />
     </ProtectedRoute>
   )
